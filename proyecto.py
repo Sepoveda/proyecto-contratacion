@@ -3,7 +3,7 @@ import os
 import platform
 
 # Cargar el archivo Excel base
-wb_base = load_workbook("CONTRATACION 2024.xlsm")
+wb_base = load_workbook("CONTRATACION_2024.xlsm")
 
 # Especificar la hoja por su nombre
 nombre_hoja = "FESTIVOS"  # Reemplaza "Hoja1" por el nombre de la hoja que necesites
@@ -30,10 +30,6 @@ def abrir_archivo(archivo):
     sistema = platform.system()
     if sistema == "Windows":
         os.startfile(archivo)
-    elif sistema == "Darwin":  # macOS
-        os.system(f"open {archivo}")
-    elif sistema == "Linux":
-        os.system(f"xdg-open {archivo}")
-
+        
 # Llamar a la función para abrir el archivo
 abrir_archivo(archivo_nuevo)
